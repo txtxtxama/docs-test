@@ -1,3 +1,3 @@
 # VitePress
 
-demo
+build
