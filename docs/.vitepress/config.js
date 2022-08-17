@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
     title: '标题',
     lang: 'zh-CN',
+    base:'/docs-test/',
     themeConfig: {
         siteTitle: '主标题',
         nav: [
