@@ -12,17 +12,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.2
         with:
           version: 7
 
-      - run: pnpm install --frozen-lockfile
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: pnpm
+
+      - name: Install Dep
+        run: pnpm install --frozen-lockfile
 
       - name: Build
         run: pnpm docs:build
