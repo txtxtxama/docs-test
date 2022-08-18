@@ -21,7 +21,14 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.2
         with:
-          version: 7
+          version: latest
+      
+      # 安装 Node.js
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: pnpm
 
       # 安装 依赖
       - name: Install Dependencies
@@ -30,6 +37,10 @@ jobs:
       # 构建
       - name: Build
         run: pnpm docs:build
+
+      - name: Test
+        run: node -v
+        run: pnpm -v
 
       # 部署
       - name: Deploy
