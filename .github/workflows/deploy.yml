@@ -38,8 +38,10 @@ jobs:
       - name: Build
         run: pnpm docs:build
 
-      - name: Test
+      - name: node V
         run: node -v
+        
+      - name: pnpm V
         run: pnpm -v
 
       # 部署
