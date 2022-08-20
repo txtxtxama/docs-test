@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Button } from '@/index'
+import { Button } from '@txtxtxama/aaa'
 // import { Button } from '../dist/bundle.mjs'
 </script>
 
