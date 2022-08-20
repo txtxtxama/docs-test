@@ -8,3 +8,8 @@ export default {
         app.component('Button', Button)
     }
 }
+
+export type BTN = {
+    a: string,
+    b: number
+}
