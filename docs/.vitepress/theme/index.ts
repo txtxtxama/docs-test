@@ -2,8 +2,9 @@ import '@/styles/index.scss'
 import 'uno.css'
 
 import { provideGlobalConfig } from 'element-plus'
-import zhCn from 'element-plus/es/locale/lang/zh-cn'
+import zhCn from 'element-plus/lib/locale/lang/zh-cn'
 import DefaultTheme from 'vitepress/theme'
+import { Theme } from 'vitepress'
 
 export default {
     ...DefaultTheme,
@@ -14,4 +15,4 @@ export default {
             locale: zhCn
         }, app, true)
     }
-}
+} as Theme
