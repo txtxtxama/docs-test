@@ -1,15 +1,21 @@
-import { App } from 'vue'
+import type { App } from 'vue'
 import Button from './components/Button.vue'
 
 export { Button }
 
+const components = [Button]
+
+export function install(app: App) {
+    components.forEach((component) => {
+        app.component(component.name, component)
+    })
+}
+
 export default {
-    install(app: App) {
-        app.component('Button', Button)
-    }
+    install
 }
 
 export type BTN = {
-    a: string,
+    a: string
     b: number
 }

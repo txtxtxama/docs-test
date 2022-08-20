@@ -1,6 +1,6 @@
 {
     "name": "@txtxtxama/aaa",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "scripts": {
         "build": "vite build",
         "docs:dev": "vitepress dev docs",
@@ -10,15 +10,9 @@
     "license": "MIT",
     "private": false,
     "files": ["dist/*"],
-    "main": "./dist/bundle.umd.js",
-    "module": "./dist/bundle.mjs",
-    "types": "./dist/index.d.ts",
-    "exports": {
-        ".": {
-            "import": "./dist/bundle.mjs",
-            "require": "./dist/bundle.umd.js"
-        }
-    },
+    "main": "dist/bundle.umd.js",
+    "module": "dist/bundle.mjs",
+    "types": "dist/index.d.ts",
     "devDependencies": {
         "@types/node": "^18.7.8",
         "@vitejs/plugin-vue": "^3.0.3",
