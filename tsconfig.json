@@ -4,7 +4,8 @@
         "module": "commonjs" /* Specify what module code is generated. */,
         "baseUrl": ".",
         "paths": {
-            "@/*": ["./src/*"]
+            "@/*": ["./src/*"],
+            "txtxtxama/aaa": ["./src/index.ts"]
         },
         "jsx": "preserve",
         "lib": ["ESNext", "DOM"],
