@@ -1,14 +1,8 @@
-// package.json
 {
-    // 脚本
-    "scripts": {
-        "lint-staged": "lint-staged"
-    },
-    // lint-staged 配置
-    "lint-staged": {
-        // 匹配暂存区的文件, 并执行命令
-        "*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix",
-        // 命令 可以 是 数组
-        "*.{vue,css,scss}": ["stylelint --fix"]
+    "scripts": {},
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-git"
+        }
     }
 }
