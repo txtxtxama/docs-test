@@ -7,7 +7,7 @@ export { Button, CustomButton, Select , Select2}
 
 import type { App } from 'vue'
 
-const components = [Button, CustomButton, Select]
+const components = [Button, CustomButton, Select, Select2]
 
 export function install(app: App) {
     components.forEach((component) => {
