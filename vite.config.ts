@@ -7,11 +7,11 @@ export default defineConfig({
     build: {
         lib: {
             entry: resolve(__dirname, './src/index.ts'),
-            name: 'index',
+            name: 'element-plus-components-lib',
             fileName: 'index'
         },
         rollupOptions: {
-            // 排除 vue 和 element-plus
+            // 不 打包进库 的 依赖
             external: ['vue', 'element-plus'],
             output: {
                 globals: {

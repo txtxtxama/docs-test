@@ -1,6 +1,6 @@
 {
     "name": "@txtxtxama/aaa",
-    "version": "0.0.8",
+    "version": "0.0.11",
     "scripts": {
         "build": "vite build",
         "docs:dev": "vitepress dev docs",
@@ -16,11 +16,13 @@
     "types": "./dist/index.d.ts",
     "main": "./dist/index.umd.cjs",
     "module": "./dist/index.js",
+    "style": "./dist/style.css",
     "exports": {
         ".": {
             "import": "./dist/index.js",
             "require": "./dist/index.umd.cjs"
-        }
+        },
+        "./*": "./*"
     },
     "devDependencies": {
         "@types/node": "^18.7.8",
