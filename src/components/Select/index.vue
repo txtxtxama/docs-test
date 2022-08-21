@@ -1,0 +1,101 @@
+<template>
+    <div class="main-container">
+        <div class="select-class">
+            <el-select
+                v-model="val"
+                :popper-class="styles[`select-popper-class`]"
+                clearable
+            >
+                <el-option
+                    v-for="item in list"
+                    :key="item.id"
+                    :label="item.id"
+                    :value="item.id"
+                >
+                </el-option>
+            </el-select>
+        </div>
+    </div>
+</template>
+
+<script lang="ts" setup>
+import { ref, useCssModule } from 'vue'
+import { ElSelect, ElOption} from 'element-plus';
+
+const styles = useCssModule()
+const val = ref('')
+const list = Array.from({ length: 10 }).map((_, i) => {
+    return {
+        id: i + 1
+    }
+})
+</script>
+
+<style lang="scss" scoped>
+.main-container {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+.select-class {
+    width: 100px;
+    height: 30px;
+    :deep() {
+        .el-select,
+        .select-trigger,
+        .el-input {
+            width: 100%;
+            height: 100%;
+        }
+        .el-input__inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 0;
+            background-color: #0E4290;
+            color: #fff;
+            border: 1px solid #00C0FF;
+        }
+        .el-input__suffix {
+            right: 0;
+            width: 30px;
+            height: 100%;
+            border-left: 1px solid #00C0FF;
+            .el-input__suffix-inner,
+            .el-input__icon {
+                width: 100%;
+                height: 100%;
+                color: #fff;
+            }
+        }
+    }
+}
+</style>
+
+<style lang="scss" module>
+.select-popper-class {
+    background-color: #2E56A3;
+    border: none!important;
+    border-radius: 0;
+    // :global(.el-popper__arrow) {
+    //     display: none;
+    // }
+    :global {
+        .el-popper__arrow {
+            display: none;
+        }
+        .el-select-dropdown__item {
+            color: #fff;
+            &.selected {
+                color: #00C0FF;
+            }
+            &.hover,
+            &:hover {
+                background-color: rgba(255, 255, 255, .2);
+            }
+        }
+        .el-select-dropdown__empty {
+            color: #fff;
+        }
+    }
+}
+</style>

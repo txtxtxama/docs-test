@@ -1,6 +1,6 @@
 {
     "name": "@txtxtxama/aaa",
-    "version": "0.0.11",
+    "version": "0.0.12",
     "scripts": {
         "build": "vite build",
         "docs:dev": "vitepress dev docs",
