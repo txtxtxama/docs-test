@@ -1,12 +1,9 @@
-import Button from './Button.vue'
-import CustomButton from './CustomButton.vue'
+import Button from './Button'
+import CustomButton from './CustomButton'
 
 export { Button, CustomButton }
 
 import type { App } from 'vue'
-
-
-
 
 const components = [Button, CustomButton]
 
