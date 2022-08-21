@@ -11,6 +11,7 @@ export default defineConfig({
             fileName: 'index'
         },
         rollupOptions: {
+            // 排除 vue 和 element-plus
             external: ['vue', 'element-plus'],
             output: {
                 globals: {
