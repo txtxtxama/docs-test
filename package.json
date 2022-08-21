@@ -5,7 +5,8 @@
         "build": "vite build",
         "docs:dev": "vitepress dev docs",
         "docs:build": "vitepress build docs",
-        "docs:serve": "vitepress serve docs"
+        "docs:serve": "vitepress serve docs",
+        "lint-staged": "lint-staged"
     },
     "license": "MIT",
     "private": false,
@@ -36,6 +37,7 @@
         "element-plus": "^2.2.14",
         "eslint": "^8.22.0",
         "eslint-plugin-vue": "^9.3.0",
+        "lint-staged": "^13.0.3",
         "postcss-html": "^1.5.0",
         "postcss-prefix-selector": "^1.16.0",
         "sass": "^1.54.5",
@@ -50,5 +52,9 @@
         "vitepress": "1.0.0-alpha.4",
         "vue": "^3.2.37",
         "vue-tsc": "^0.40.1"
+    },
+    "lint-staged": {
+        "*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix",
+        "*.{vue,css,scss}": ["stylelint --fix"]
     }
 }

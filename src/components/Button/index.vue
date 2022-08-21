@@ -7,8 +7,8 @@ export default defineComponent({
         return () => {
             return h(
                 ElButton,
-                mergeProps(props, {
-                    class: 'border-test'
+                mergeProps(props,        {
+                    class: 'border-test'     
                 }),
                 slots
             )
