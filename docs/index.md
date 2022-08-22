@@ -1,9 +1,8 @@
-# VitePress
-
-build
+# test
 
 <script lang="ts" setup>
-import Index from './index.vue'
+import {  Button, add } from "txtxtxama-aaa-c";
+console.log(add(1, 2))
 </script>
 
-<Index></Index>
+<Button>123</Button>

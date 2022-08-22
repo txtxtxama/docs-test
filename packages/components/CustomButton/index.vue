@@ -14,7 +14,7 @@
     border: 1px solid blue;
     display: inline-flex;
     .inner {
-        background-color: red
+        background-color: red;
     }
 }
 </style>

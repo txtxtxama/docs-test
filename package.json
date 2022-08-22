@@ -1,6 +1,6 @@
 {
-    "name": "@txtxtxama/aaa",
-    "version": "0.0.14",
+    "name": "txtxtxama-aaa-c",
+    "version": "0.0.5",
     "scripts": {
         "build": "vite build",
         "docs:dev": "vitepress dev docs",
@@ -17,13 +17,13 @@
     ],
     "main": "./dist/index.umd.js",
     "module": "./dist/index.mjs",
-    "types": "./dist/index.d.ts",
+    "types": "./dist/packages/txtxtxama-aaa-c/index.d.ts",
     "style": "./dist/style.css",
     "exports": {
         ".": {
             "import": "./dist/index.mjs",
             "require": "./dist/index.umd.js",
-            "types": "./dist/index.d.ts"
+            "types": "./dist/packages/txtxtxama-aaa-c/index.d.ts"
         },
         "./*": "./*"
     },

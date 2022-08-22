@@ -1,15 +1,22 @@
-/// <reference types="vite/client" />
+import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import dts from 'vite-plugin-dts'
 
+// https://vitejs.dev/config/
 export default defineConfig({
+    plugins: [vue(), vueJsx(), dts()],
+    resolve: {
+        alias: {
+            '@txtxtxama-aaa-c': fileURLToPath(new URL('./packages', import.meta.url))
+        }
+    },
     build: {
         lib: {
-            entry: resolve(__dirname, './src/index.ts'),
-            name: 'element-plus-components-lib',
+            entry: fileURLToPath(new URL('./packages/txtxtxama-aaa-c/index.ts', import.meta.url)),
+            name: 'txtxtxama-aaa-c',
             fileName: 'index'
         },
         rollupOptions: {
@@ -22,6 +29,5 @@ export default defineConfig({
                 }
             }
         }
-    },
-    plugins: [vue(), dts({ insertTypesEntry: true, copyDtsFiles: false })]
+    }
 })

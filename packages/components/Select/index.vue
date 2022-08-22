@@ -20,7 +20,7 @@
 
 <script lang="ts" setup>
 import { ref, useCssModule } from 'vue'
-import { ElSelect, ElOption} from 'element-plus';
+import { ElSelect, ElOption } from 'element-plus'
 
 const styles = useCssModule()
 const val = ref('')
@@ -51,15 +51,15 @@ const list = Array.from({ length: 10 }).map((_, i) => {
             width: 100%;
             height: 100%;
             border-radius: 0;
-            background-color: #0E4290;
+            background-color: #0e4290;
             color: #fff;
-            border: 1px solid #00C0FF;
+            border: 1px solid #00c0ff;
         }
         .el-input__suffix {
             right: 0;
             width: 30px;
             height: 100%;
-            border-left: 1px solid #00C0FF;
+            border-left: 1px solid #00c0ff;
             .el-input__suffix-inner,
             .el-input__icon {
                 width: 100%;
@@ -73,9 +73,10 @@ const list = Array.from({ length: 10 }).map((_, i) => {
 
 <style lang="scss" module>
 .select-popper-class {
-    background-color: #2E56A3;
-    border: none!important;
+    background-color: #2e56a3;
+    border: none !important;
     border-radius: 0;
+
     // :global(.el-popper__arrow) {
     //     display: none;
     // }
@@ -86,11 +87,11 @@ const list = Array.from({ length: 10 }).map((_, i) => {
         .el-select-dropdown__item {
             color: #fff;
             &.selected {
-                color: #00C0FF;
+                color: #00c0ff;
             }
             &.hover,
             &:hover {
-                background-color: rgba(255, 255, 255, .2);
+                background-color: rgb(255 255 255 / 20%);
             }
         }
         .el-select-dropdown__empty {

@@ -21,7 +21,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import styles from './select2.module.scss'
-import { ElSelect, ElOption} from 'element-plus';
+import { ElSelect, ElOption } from 'element-plus'
 
 const val = ref('')
 const list = Array.from({ length: 10 }).map((_, i) => {
