@@ -31,6 +31,7 @@ module.exports = {
         'selector-pseudo-class-no-unknown': null,
         'selector-pseudo-element-no-unknown': null,
         'no-duplicate-selectors': null,
-        'at-rule-no-unknown': null
+        'at-rule-no-unknown': null,
+        'selector-class-pattern': null
     }
 }
